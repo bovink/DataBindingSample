@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!--Data Binding Layout Files-->
+        <activity
+            android:name=".databinding.databindinglayout.DataBindingLayoutActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".databinding.databindinglayout.LayoutBindActivity"
             android:screenOrientation="portrait" />

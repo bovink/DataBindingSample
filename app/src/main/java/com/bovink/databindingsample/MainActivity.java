@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         if (type == 1) {
 
             mapList = generateResourceList();
-            mPackageName = "com.bovink.databindingsample.databinding.layoutbinding.";
+            mPackageName = "com.bovink.databindingsample.databinding.databindinglayout.";
         } else if (type == 2) {
 
             mapList = generateEventList();
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> map;
 
         map = new HashMap<>();
-        map.put("name", "MainActivity.LayoutBinding");
+        map.put("name", "MainActivity.DataBindingLayout");
         mapList.add(map);
         map = new HashMap<>();
         map.put("name", "MainActivity.LayoutDetails");
@@ -136,6 +136,9 @@ public class MainActivity extends AppCompatActivity {
         List<Map<String, String>> mapList = new ArrayList<>();
         Map<String, String> map;
 
+        map = new HashMap<>();
+        map.put("name", "DataBindingLayoutActivity");
+        mapList.add(map);
         map = new HashMap<>();
         map.put("name", "LayoutBindActivity");
         mapList.add(map);
