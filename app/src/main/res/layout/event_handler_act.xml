@@ -8,6 +8,10 @@
             type="com.bovink.databindingsample.model.PojoUser" />
 
         <variable
+            name="clark"
+            type="com.bovink.databindingsample.model.PojoUser" />
+
+        <variable
             name="bane"
             type="com.bovink.databindingsample.model.PojoUser" />
 
@@ -20,18 +24,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:onClick="@{() -> choice.kickAss(bruce, bane)}"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{bruce.firstName}" />
+            android:onClick="@{() -> choice.kickAss(bruce, bane)}"
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{bruce.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@{bruce.lastName}" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="@{bruce.lastName}" />
+            android:layout_marginTop="30dp"
+            android:onClick="@{(view) -> choice.kickAss(clark, bane)}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{clark.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@{clark.lastName}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:onClick="@{(view) -> choice.runAway(view, bane, bruce, clark)}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{bane.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@{bane.lastName}" />
+        </LinearLayout>
     </LinearLayout>
 </layout>
