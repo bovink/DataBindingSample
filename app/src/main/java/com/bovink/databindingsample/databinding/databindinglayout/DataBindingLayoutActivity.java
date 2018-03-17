@@ -22,6 +22,7 @@ public class DataBindingLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityDataBindingLayoutBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_layout);
+//        ActivityDataBindingLayoutBinding binding = ActivityDataBindingLayoutBinding.inflate(getLayoutInflater());
 
         PojoUser pojoUser = new PojoUser("Bruce", "Wayne");
         binding.setPojoUser(pojoUser);
