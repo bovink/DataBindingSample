@@ -3,21 +3,6 @@
 
     <data>
 
-        <variable
-            name="person1"
-            type="com.bovink.databindingsample.model.Person" />
-
-        <variable
-            name="person2"
-            type="com.bovink.databindingsample.model.Person" />
-
-        <variable
-            name="reference"
-            type="com.bovink.databindingsample.databinding.databindinglayout.EventHandlerActivity.MethodReference" />
-
-        <variable
-            name="binding"
-            type="com.bovink.databindingsample.databinding.databindinglayout.EventHandlerActivity.ListenerBinding" />
     </data>
 
     <LinearLayout
@@ -26,24 +11,5 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{person1.name}" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{reference::methodDoSomething}" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{person2.name}" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{(view) -> binding.listenerDoSomething()}" />
     </LinearLayout>
 </layout>
