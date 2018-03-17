@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
         map.put("name", "LayoutBindActivity");
         mapList.add(map);
         map = new HashMap<>();
-        map.put("name", "EventHandlerActivity");
+        map.put("name", "EventHandlingActivity");
         mapList.add(map);
 
         return mapList;

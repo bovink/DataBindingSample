@@ -12,7 +12,7 @@ import com.bovink.databindingsample.databinding.EventHandlerActBinding;
  * @since 2018/03/13
  */
 
-public class EventHandlerActivity extends AppCompatActivity {
+public class EventHandlingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
