@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.databindingsample.R;
 import com.bovink.databindingsample.databinding.ActivityDataBindingLayoutBinding;
+import com.bovink.databindingsample.model.JavaBeansUser;
 import com.bovink.databindingsample.model.PojoUser;
 
 /**
@@ -21,8 +22,12 @@ public class DataBindingLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityDataBindingLayoutBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_layout);
+
         PojoUser pojoUser = new PojoUser("Bruce", "Wayne");
         binding.setPojoUser(pojoUser);
+
+        JavaBeansUser javaBeansUser = new JavaBeansUser("Clark", "Kent");
+        binding.setJavaBeansUser(javaBeansUser);
 
     }
 }

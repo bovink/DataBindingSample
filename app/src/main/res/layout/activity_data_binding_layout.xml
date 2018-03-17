@@ -6,22 +6,48 @@
         <variable
             name="pojoUser"
             type="com.bovink.databindingsample.model.PojoUser" />
+
+        <variable
+            name="javaBeansUser"
+            type="com.bovink.databindingsample.model.JavaBeansUser" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{pojoUser.firstName}" />
+            android:orientation="horizontal">
 
-        <TextView
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{pojoUser.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{pojoUser.lastName}" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{pojoUser.lastName}" />
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{javaBeansUser.firstName}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{javaBeansUser.lastName}" />
+        </LinearLayout>
     </LinearLayout>
 </layout>
