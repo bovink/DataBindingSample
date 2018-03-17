@@ -34,11 +34,13 @@ public class EventHandlingActivity extends AppCompatActivity {
         PojoUser bane = new PojoUser("", "Bane");
         binding.setBane(bane);
 
-        Choice choice = new Choice();
-        binding.setChoice(choice);
+        Action action = new Action();
+        binding.setAction(action);
     }
 
-    public class Choice {
+    public class Action {
+
+        boolean revenge = false;
 
         public void kickAss(PojoUser whosleg, PojoUser whosass) {
 
@@ -50,5 +52,31 @@ public class EventHandlingActivity extends AppCompatActivity {
             view.setBackgroundColor(Color.parseColor("#66CCFF"));
             Toast.makeText(EventHandlingActivity.this, whoIsRun.lastName + " is run away from " + chaserA.lastName + " and " + chaserB.lastName, Toast.LENGTH_SHORT).show();
         }
+
+        public void revenge(PojoUser enemyA, PojoUser enemyB, boolean decidedToRevenge) {
+
+            revenge = decidedToRevenge;
+
+            if (decidedToRevenge) {
+
+                Toast.makeText(EventHandlingActivity.this, "Bane wanna revenge " + enemyA.lastName + " and " + enemyB.lastName, Toast.LENGTH_SHORT).show();
+            } else {
+
+                Toast.makeText(EventHandlingActivity.this, "Bane was scared and ran away", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+        public boolean choose() {
+
+            if (revenge) {
+
+                Toast.makeText(EventHandlingActivity.this, "Bane broken Bruce's back in front of Clark", Toast.LENGTH_SHORT).show();
+            } else {
+
+                Toast.makeText(EventHandlingActivity.this, "Bane ran away with tears", Toast.LENGTH_SHORT).show();
+            }
+            return false;
+        }
+
     }
 }
