@@ -1,4 +1,4 @@
-package com.bovink.databindingsample.databinding.layoutbinding;
+package com.bovink.databindingsample.databinding.databindinglayout;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;

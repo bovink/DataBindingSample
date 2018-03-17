@@ -13,11 +13,11 @@
 
         <variable
             name="reference"
-            type="com.bovink.databindingsample.databinding.layoutbinding.EventHandlerActivity.MethodReference" />
+            type="com.bovink.databindingsample.databinding.databindinglayout.EventHandlerActivity.MethodReference" />
 
         <variable
             name="binding"
-            type="com.bovink.databindingsample.databinding.layoutbinding.EventHandlerActivity.ListenerBinding" />
+            type="com.bovink.databindingsample.databinding.databindinglayout.EventHandlerActivity.ListenerBinding" />
     </data>
 
     <LinearLayout

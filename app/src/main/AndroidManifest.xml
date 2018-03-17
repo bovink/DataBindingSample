@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".databinding.layoutbinding.LayoutBindActivity"
+            android:name=".databinding.databindinglayout.LayoutBindActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".databinding.layoutbinding.EventHandlerActivity"
+            android:name=".databinding.databindinglayout.EventHandlerActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".databinding.layoutdetails.ImportActivity"
