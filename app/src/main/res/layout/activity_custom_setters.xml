@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data class="CustomSettersActBinding">
+
+        <variable
+            name="person1"
+            type="com.bovink.databindingsample.model.Person" />
+
+        <variable
+            name="person2"
+            type="com.bovink.databindingsample.model.Person" />
+
+        <variable
+            name="person3"
+            type="com.bovink.databindingsample.model.Person" />
+
+        <variable
+            name="handler"
+            type="com.bovink.databindingsample.databinding.attributesetters.CustomSettersActivity.EventHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.bovink.databindingsample.widget.StudentView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:age="@{person1.age}" />
+
+        <com.bovink.databindingsample.widget.StudentView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:name="@{person2.name}" />
+
+        <com.bovink.databindingsample.widget.StudentView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:age="@{person3.age}"
+            app:name="@{person3.name}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.changeAge()}"
+            android:text="change age" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data class="GenerateViewActBinding">
+
+        <variable
+            name="person"
+            type="com.bovink.databindingsample.model.Person" />
+
+        <variable
+            name="handler"
+            type="com.bovink.databindingsample.databinding.generatebinding.GenerateViewActivity.EventHandler" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/introduceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="generatebinding" />
+
+        <Button
+            android:id="@+id/changeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change" />
+
+        <ViewStub
+            android:id="@+id/viewStub"
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:layout="@layout/viewstub_show" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> handler.inflateView()}"
+            android:text="inflate" />
+    </LinearLayout>
+</layout>

@@ -16,6 +16,54 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".databinding.layoutbinding.LayoutBindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.layoutbinding.EventHandlerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.layoutdetails.ImportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.layoutdetails.IncludeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.layoutdetails.CustomBindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.expression.ExpressionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.expression.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.expression.ResourceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.observabledata.ObservableActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.observabledata.ObservableCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.generatebinding.GenerateViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!--Converters-->
+        <activity
+            android:name=".databinding.converter.ConverterActivity"
+            android:screenOrientation="portrait" />
+        <!--Attribute Setters-->
+        <activity
+            android:name=".databinding.attributesetters.AutomaticSettersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.attributesetters.RenamedSettersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".databinding.attributesetters.CustomSettersActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
