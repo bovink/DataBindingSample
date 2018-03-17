@@ -27,7 +27,9 @@ public class DataBindingLayoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         ActivityDataBindingLayoutBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_layout);
+        // another way for data binding layout
 //        ActivityDataBindingLayoutBinding binding = ActivityDataBindingLayoutBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
 
         pojoUser = new PojoUser("Bruce", "Wayne");
         binding.setPojoUser(pojoUser);
@@ -41,11 +43,17 @@ public class DataBindingLayoutActivity extends AppCompatActivity {
 
     public class EventHandler {
 
+        /**
+         * must exactly match the signature of the method in the Listener object
+         */
         public void bruceSays(View view) {
 
             Toast.makeText(DataBindingLayoutActivity.this, "I'm BatMan.", Toast.LENGTH_SHORT).show();
         }
 
+        /**
+         * must match the expected return value of the listener (unless it is expecting void)
+         */
         public void clarkSays() {
 
             Toast.makeText(DataBindingLayoutActivity.this, "I'm SuperMan.", Toast.LENGTH_SHORT).show();
