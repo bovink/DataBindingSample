@@ -4,6 +4,8 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
 
 import com.bovink.databindingsample.R;
 import com.bovink.databindingsample.databinding.ActivityDataBindingLayoutBinding;
@@ -17,6 +19,9 @@ import com.bovink.databindingsample.model.PojoUser;
 
 public class DataBindingLayoutActivity extends AppCompatActivity {
 
+    PojoUser pojoUser;
+    JavaBeansUser javaBeansUser;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +29,26 @@ public class DataBindingLayoutActivity extends AppCompatActivity {
         ActivityDataBindingLayoutBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_layout);
 //        ActivityDataBindingLayoutBinding binding = ActivityDataBindingLayoutBinding.inflate(getLayoutInflater());
 
-        PojoUser pojoUser = new PojoUser("Bruce", "Wayne");
+        pojoUser = new PojoUser("Bruce", "Wayne");
         binding.setPojoUser(pojoUser);
 
-        JavaBeansUser javaBeansUser = new JavaBeansUser("Clark", "Kent");
+        javaBeansUser = new JavaBeansUser("Clark", "Kent");
         binding.setJavaBeansUser(javaBeansUser);
 
+        EventHandler handler = new EventHandler();
+        binding.setHandler(handler);
+    }
+
+    public class EventHandler {
+
+        public void bruceSays(View view) {
+
+            Toast.makeText(DataBindingLayoutActivity.this, "I'm BatMan.", Toast.LENGTH_SHORT).show();
+        }
+
+        public void clarkSays() {
+
+            Toast.makeText(DataBindingLayoutActivity.this, "I'm SuperMan.", Toast.LENGTH_SHORT).show();
+        }
     }
 }
