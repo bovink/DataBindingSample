@@ -21,9 +21,6 @@
             android:name=".databinding.databindinglayout.DataBindingLayoutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".databinding.databindinglayout.LayoutBindActivity"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".databinding.databindinglayout.EventHandlingActivity"
             android:screenOrientation="portrait" />
         <activity
