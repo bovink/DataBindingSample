@@ -5,19 +5,6 @@
 
         <import type="android.view.View" />
 
-        <import type="com.bovink.databindingsample.model.Person" />
-
-        <import type="java.util.List" />
-
-        <import type="com.bovink.databindingsample.utils.StringUtils" />
-
-        <variable
-            name="person"
-            type="Person" />
-
-        <variable
-            name="personList"
-            type="List&lt;Person&gt;" />
     </data>
 
     <LinearLayout
@@ -26,10 +13,5 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{StringUtils.format(person.name)}"
-            android:visibility="@{person.adult ? View.VISIBLE : View.GONE}" />
     </LinearLayout>
 </layout>

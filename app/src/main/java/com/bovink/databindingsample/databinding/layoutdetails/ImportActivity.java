@@ -5,7 +5,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.databindingsample.databinding.ImportActBinding;
-import com.bovink.databindingsample.model.Person;
 
 
 /**
@@ -22,10 +21,5 @@ public class ImportActivity extends AppCompatActivity{
         ImportActBinding binding = ImportActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Person person = new Person();
-        person.setName("lilei");
-        person.setAdult(true);
-
-        binding.setPerson(person);
     }
 }
