@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.bovink.databindingsample.databinding.ImportActBinding;
+import com.bovink.databindingsample.databinding.ActImportBinding;
 
 
 /**
@@ -18,7 +18,7 @@ public class ImportActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ImportActBinding binding = ImportActBinding.inflate(getLayoutInflater());
+        ActImportBinding binding = ActImportBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
     }
