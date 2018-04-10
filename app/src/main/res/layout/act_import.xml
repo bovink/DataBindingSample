@@ -5,6 +5,9 @@
 
         <import type="android.view.View" />
 
+        <variable
+            name="user"
+            type="com.bovink.databindingsample.model.User" />
     </data>
 
     <LinearLayout
@@ -13,5 +16,10 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firstName}"
+            android:visibility="@{user.adult ? View.VISIBLE : View.GONE}" />
     </LinearLayout>
 </layout>

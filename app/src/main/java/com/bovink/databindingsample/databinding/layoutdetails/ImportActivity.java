@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.databindingsample.databinding.ActImportBinding;
+import com.bovink.databindingsample.model.User;
 
 
 /**
@@ -12,7 +13,7 @@ import com.bovink.databindingsample.databinding.ActImportBinding;
  * @since 2018/03/08
  */
 
-public class ImportActivity extends AppCompatActivity{
+public class ImportActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,6 +21,9 @@ public class ImportActivity extends AppCompatActivity{
 
         ActImportBinding binding = ActImportBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        User user = new User("Bruce", "Wayne", false);
+        binding.setUser(user);
 
     }
 }
