@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.bovink.databindingsample.CustomBindActBinding;
-import com.bovink.databindingsample.model.Person;
+import com.bovink.databindingsample.databinding.CustomActBinding;
+import com.bovink.databindingsample.model.User;
 
 
 /**
@@ -19,14 +19,11 @@ public class CustomBindActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        CustomBindActBinding binding = CustomBindActBinding.inflate(getLayoutInflater());
+        CustomActBinding binding = CustomActBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        Person person = new Person();
-        person.setName("super man");
-        person.setSex("male");
-
-        binding.setPerson(person);
+        User user = new User("Bruce", "Wayne", true);
+        binding.setUser(user);
 
     }
 }
