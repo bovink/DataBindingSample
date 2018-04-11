@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="person"
-            type="com.bovink.databindingsample.model.Person" />
+            name="user"
+            type="com.bovink.databindingsample.model.User" />
     </data>
 
     <LinearLayout
@@ -15,17 +15,17 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/layout_include_name"
+            layout="@layout/layout_include_firstname"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            bind:person="@{person}" />
+            bind:user="@{user}" />
 
         <include
-            layout="@layout/layout_include_sex"
+            layout="@layout/layout_include_lastname"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            bind:person="@{person}" />
+            bind:user="@{user}" />
     </LinearLayout>
 </layout>
