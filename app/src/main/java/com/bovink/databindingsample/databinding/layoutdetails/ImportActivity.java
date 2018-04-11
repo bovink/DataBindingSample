@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bovink.databindingsample.databinding.ActImportBinding;
 import com.bovink.databindingsample.model.User;
+import com.bovink.databindingsample.model.View;
 
 
 /**
@@ -22,8 +23,10 @@ public class ImportActivity extends AppCompatActivity {
         ActImportBinding binding = ActImportBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        User user = new User("Bruce", "Wayne", false);
+        User user = new User("Bruce", "Wayne", true);
         binding.setUser(user);
 
+        View view = new View("#000000");
+        binding.setViewAlias(view);
     }
 }

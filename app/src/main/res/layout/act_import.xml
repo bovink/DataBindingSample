@@ -5,9 +5,17 @@
 
         <import type="android.view.View" />
 
+        <import
+            alias="ViewAlias"
+            type="com.bovink.databindingsample.model.View" />
+
         <variable
             name="user"
             type="com.bovink.databindingsample.model.User" />
+
+        <variable
+            name="viewAlias"
+            type="ViewAlias" />
     </data>
 
     <LinearLayout
@@ -20,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{user.firstName}"
+            android:textColor="@{viewAlias.color}"
             android:visibility="@{user.adult ? View.VISIBLE : View.GONE}" />
     </LinearLayout>
 </layout>
